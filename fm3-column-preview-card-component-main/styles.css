@@ -8,11 +8,19 @@ font-family: 'Lexend Deca', sans-serif; */
   * { padding: 0; margin: 0; }
   html, body {
       min-height: 100% !important;
-      height: 100%;
+      /* height: 100%; */
       width: 100%;
       font-family: 'Lexend Deca', sans-serif;
+      margin-top: 200px;
 
   }
+
+  @media only screen and (max-width: 710px) {
+    html, body{
+        margin-bottom: 100px;
+    }
+}
+
 
 body {
     background-color: var(--light-gray);
@@ -30,6 +38,12 @@ main {
     align-items: center;
 }
 
+@media only screen and (max-width: 710px) {
+    main {
+    }
+}
+
+
 #content-wrapper {
     max-width: 1400px;
     max-height: 600px;
@@ -40,29 +54,60 @@ main {
     align-items: center;
 }
 
+@media only screen and (max-width: 710px) {
+    #content-wrapper {
+        display: flex;
+        flex-direction: column;
+        max-width: 375px;
+        /* margin-top: 250px; */
+    }
+}
+
+
+
 #card-sedans {
     background-color: hsl(31, 77%, 52%);
     max-width: 150px;
-    height: 100%;
     padding: 30px;
     border-bottom-left-radius: 8px;
     border-top-left-radius: 8px;
 }
 
+@media only screen and (max-width: 710px) {
+    #card-sedans {
+        max-width: 250px;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 8px;
+
+    }
+}
+
 #card-SUVs {
     background-color: hsl(184, 100%, 22%);
     max-width: 150px;
-    height: 100%;
     padding: 30px;
+}
+
+@media only screen and (max-width: 710px) {
+    #card-SUVs {
+        max-width: 250px;
+    }
 }
 
 #card-Luxury {
     background-color: hsl(179, 100%, 13%);
-    height: 100%;
     max-width: 150px;
     padding: 30px;
     border-bottom-right-radius: 8px;
     border-top-right-radius: 8px;
+}
+
+@media only screen and (max-width: 710px) {
+    #card-Luxury {
+        max-width: 250px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 8px;
+    }
 }
 
 .icon-style {
@@ -101,7 +146,6 @@ button {
 #card-sedans button {
     color: hsl(31, 77%, 52%);
     font-size: 13px;
-    transition: all 0.5s ease-in-out;
 }
 
 #card-sedans button:hover {
@@ -121,11 +165,6 @@ button {
     font-size: 13px;
 }
 
-/* #button-sedans {
-    color: hsl(31, 77%, 52%);
-    font-size: 13px;
-} */
-
 footer {
     flex-shrink: 0;
     height: 50px;
@@ -141,8 +180,9 @@ footer a{
     color: hsl(277, 64%, 61%);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 710px) {
     footer {
-        opacity: 0
+        opacity: 0;
+        height: 100px;
     }
 }
