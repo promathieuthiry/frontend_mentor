@@ -1,0 +1,148 @@
+:root {
+    --light-gray: hsl(0, 0%, 95%);
+  }
+
+  /* font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif; */
+
+  * { padding: 0; margin: 0; }
+  html, body {
+      min-height: 100% !important;
+      height: 100%;
+      width: 100%;
+      font-family: 'Lexend Deca', sans-serif;
+
+  }
+
+body {
+    background-color: var(--light-gray);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#content-wrapper {
+    max-width: 1400px;
+    max-height: 600px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#card-sedans {
+    background-color: hsl(31, 77%, 52%);
+    max-width: 150px;
+    height: 100%;
+    padding: 30px;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+#card-SUVs {
+    background-color: hsl(184, 100%, 22%);
+    max-width: 150px;
+    height: 100%;
+    padding: 30px;
+}
+
+#card-Luxury {
+    background-color: hsl(179, 100%, 13%);
+    height: 100%;
+    max-width: 150px;
+    padding: 30px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.icon-style {
+    width: 40px;
+    height: auto;
+}
+
+.title {
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--light-gray);
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 26px;
+}
+
+.description {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 12px;
+    line-height: 20px;
+    padding-bottom: 50px;
+}
+
+button {
+    background-color: var(--light-gray);
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 60px;
+}
+
+#card-sedans button {
+    color: hsl(31, 77%, 52%);
+    font-size: 13px;
+    transition: all 0.5s ease-in-out;
+}
+
+#card-sedans button:hover {
+    color: var(--light-gray);
+    background-color: hsl(31, 77%, 52%);
+    cursor: pointer;
+    border: 2px solid var(--light-gray);
+}
+
+#card-SUVs button {
+    color: hsl(184, 100%, 22%);
+    font-size: 13px;
+}
+
+#card-Luxury  button {
+    color: hsl(179, 100%, 13%);
+    font-size: 13px;
+}
+
+/* #button-sedans {
+    color: hsl(31, 77%, 52%);
+    font-size: 13px;
+} */
+
+footer {
+    flex-shrink: 0;
+    height: 50px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+footer a{
+    text-decoration: none;
+    color: hsl(277, 64%, 61%);
+}
+
+@media only screen and (max-width: 600px) {
+    footer {
+        opacity: 0
+    }
+}
