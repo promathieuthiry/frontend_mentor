@@ -4,6 +4,9 @@
 
   /* font-family: 'Big Shoulders Display', cursive;
 font-family: 'Lexend Deca', sans-serif; */
+/* * {
+    box-sizing: border-box;
+  } */
 
   * { padding: 0; margin: 0; }
   html, body {
@@ -37,12 +40,6 @@ main {
     flex-direction: row;
     align-items: center;
 }
-
-@media only screen and (max-width: 710px) {
-    main {
-    }
-}
-
 
 #content-wrapper {
     max-width: 1400px;
