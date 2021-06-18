@@ -60,6 +60,9 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
+the Text is not visible because inheriting opacity from parent div. use rgba instead of hex code and opacity
+:last-child
+rgba(255,255,255,0.6)
 
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
