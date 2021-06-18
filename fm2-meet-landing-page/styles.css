@@ -35,7 +35,7 @@ body {
 
 
 #hero-left {
-    width: 275px;
+    width: 330px;
     height: auto;
     position: absolute;
     left: -32px;
@@ -43,17 +43,28 @@ body {
 }
 
 #hero-right {
-    width: 275px;
+    width: 330px;
     height: auto;
     position: absolute;
     right: -32px;
-    bottom: 50px;
+    bottom: 0px;
 }
 
 #hero-center {
     max-width: 540px;
     height: 304px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title-wrapper {
+    width: 445px;
+    height: 128px;
+    display: flex;
+    justify-content: center;
 }
 
 #title {
@@ -64,26 +75,27 @@ body {
     font-weight: 900;
     font-size: 64px;
     line-height: 64px;
-    text-align: center;
     color: #28283D;
+    
 }
 
 #subheader {
     margin-top: 34px;
+    margin-bottom: 32px;
     font-family: Red Hat Display;
     font-style: normal;
-    font-weight: 500;
     font-size: 18px;
     line-height: 26px;
     text-align: center;
     color: #87879D;
+    font-weight: 500;
+    height: 52px;
+    width: 100%;
 }
 
 button {
-    background-color: var(--light-gray);
     border: none;
     color: white;
-    padding: 10px 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -91,18 +103,42 @@ button {
     border-radius: 60px;
 }
 
-#card-sedans button {
-    color: hsl(31, 77%, 52%);
-    font-size: 13px;
+#button-download {
+    background-color: #4D96A9;
+    padding: 21px 40px;
+    margin-right: 16px;
 }
 
-#card-sedans button:hover {
-    color: var(--light-gray);
-    background-color: hsl(31, 77%, 52%);
+.button-text {
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+#button-what-is-it {
+    background-color: #855FB1;
+    padding: 21px 40px;
+}
+
+#button-download p {
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+#button-wrapper {
+   margin-bottom: 4px;
+
+}
+
+/* #card-sedans button:hover {
+    color: #FFFFFF;
+    background-color: #4D96A9;
     cursor: pointer;
-    border: 2px solid var(--light-gray);
+} */
+
+#button-text-version {
+    color: #8FE3F9;
 }
-
-button-download
-
-
