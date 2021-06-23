@@ -32,7 +32,7 @@ body {
 
 #bg-pattern-top {
     position: absolute;
-    transform: translate(-55%, -55%);
+    transform: translate(-45%, -55%);
 }
 
 #bg-pattern-bottom {
@@ -132,12 +132,11 @@ footer a{
 
 @media only screen and (max-width: 710px) {
     footer {
-        opacity: 0;
-        height: 100px;
+       display: none;
     }
     #wrapper-content {
         width: 320px;
-        margin-top: 100px;
+        margin-top: 0px;
 }
     #profil-pic {
         left: 115px;
