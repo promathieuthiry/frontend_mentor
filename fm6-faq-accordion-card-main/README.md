@@ -27,7 +27,7 @@ Users should be able to:
 ### Screenshot
 
 ![Desktop](./images/fm6-faq-accordion-card-main-desktop-preview.png)
-![mobile](./images/images/fm6-faq-accordion-card-main-mobile-preview.png)
+![mobile](./images/fm6-faq-accordion-card-main-mobile-preview.png)
 
 ### Links
 
