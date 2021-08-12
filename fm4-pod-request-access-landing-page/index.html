@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/styles.css">
+
+  <title>Frontend Mentor | Pod request access landing page</title>
+</head>
+
+<body>
+  <div class="hero">
+    <img src="./assets/desktop/logo.svg" alt="logo" class="hero-logo" />
+    <div class="hero-container">
+      <img src="./assets/desktop/bg-pattern-dots.svg" alt="logo" class="hero-bg-pattern" />
+      <img src="./assets/desktop/image-host.jpg" alt="cover" class="image-cover" />
+      <div class="hero-text-wrapper">
+        <p class="title"><span class="first-line">Publish your podcasts</span> everywhere.</p>
+        <p class="subheader"> Upload your audio to Pod with a single click. We’ll then distribute your
+          podcastto Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!
+        </p>
+        <div class="email-container">
+          <input type="email" class="input-email" name="email" placeholder="Email address" required
+            onfocus="Erase(false)" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/">
+          <button class="email-button" type="submit"
+            onclick="ValidateEmail(document.getElementsByClassName('input-email')[0].value, false)">Request access
+          </button>
+          <p id="email-error-message">Oops! Please check your email</p>
+        </div>
+        <div class="logo-container">
+          <img src="./assets/desktop/spotify.svg" alt="spotify-logo" class="logo-spotify">
+          <img src="./assets/desktop/apple-podcast.svg" alt="apple-logo" class="logo-apple-podcast">
+          <img src="./assets/desktop/google-podcasts.svg" alt="google-podcast-logo" class="logo-google-podcast">
+          <img src="./assets/desktop/pocket-casts.svg" alt="pocket-cast-logo" class="logo-pocket-podcast">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-mobile">
+    <img src="./assets/desktop/logo.svg" alt="logo" class="hero-logo-mobile" />
+    <div class="hero-text-wrapper-mobile">
+      <p class="title-mobile"><span class="first-line">Publish your podcasts</span> everywhere.</p>
+      <p class="subheader-mobile"> Upload your audio to Pod with a single click. We’ll then distribute your
+        podcastto Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!
+      </p>
+      <div class="logo-container-mobile">
+        <img src="./assets/desktop/spotify.svg" alt="spotify-logo" class="logo-spotify-mobile">
+        <img src="./assets/desktop/apple-podcast.svg" alt="apple-logo" class="logo-apple-podcast-mobile">
+        <img src="./assets/desktop/google-podcasts.svg" alt="google-podcast-logo" class="logo-google-podcast-mobile">
+        <img src="./assets/desktop/pocket-casts.svg" alt="pocket-cast-logo" class="logo-pocket-podcast-mobile">
+      </div>
+      <input type="email" class="input-email-mobile" name="email" placeholder="Email address" required
+        onfocus="Erase(true)" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/">
+      <button class="email-button-mobile" type="submit"
+        onclick="ValidateEmail(document.getElementsByClassName('input-email-mobile')[0].value, true)">Request access
+      </button>
+      <p id="email-error-message-mobile">Oops! Please check your email</p>
+
+    </div>
+  </div>
+  <script src="validate-email.js"></script>
+
+</body>
+
+</html>

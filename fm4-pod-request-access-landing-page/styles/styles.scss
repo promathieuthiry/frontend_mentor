@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap");
+
+$primary-color: #121725;
+$secondary-color: #54E6AF;
+$third-color: #C2CBE5;
+$fourth-color: #2C344B;
+$white-color: #FFF;
+
+@mixin green-color{
+   color: $secondary-color;
+}
+
+* { 
+    padding: 0; 
+    margin: 0;     
+    box-sizing: border-box;  
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Chivo', sans-serif;
+    font-size: 18px;
+    background-color: $primary-color;
+}
+
+
+.hero {
+  padding: 130px 0px 130px 165px;
+  width: 100%;
+  height: calc(100% - 260px);
+  position: relative;
+}
+
+.hero-logo {
+  position: absolute;
+  top: 102px;
+  left: 165px;
+}
+
+.hero-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+
+.hero-bg-pattern {
+  position: absolute;
+  bottom: 120px;
+  right: 0px;
+  z-index: 1;
+}
+
+.image-cover {
+  max-width: 888px;
+  height: 640px;
+  object-fit:cover;
+}
+
+.hero-text-wrapper {
+  width: 723px;
+  height: 509px;
+  background-color: $primary-color;
+  position: absolute;
+  top: 131px;
+  left: 0px;
+  padding: 88px 58px 0px 0px;
+}
+
+.title {
+font-size: 52px;
+line-height: 62px;
+text-transform: uppercase;
+color: $white-color;
+padding-bottom: 24px;
+}
+
+.first-line {
+  color: $secondary-color;
+}
+
+.subheader {
+font-size: 18px;
+line-height: 28px;
+color: $third-color;
+max-width: 445px;
+padding-bottom: 40px;
+}
+
+.email-container {
+  min-width: 250px;
+  max-width: 427px;
+  position: relative;
+}
+
+.input-template{
+  border: none;
+  font-weight: bold;
+  background-color: $fourth-color;
+  border-radius: 28px;
+  width: 100%;
+  font-size: 14px;
+  color: $white-color;
+  outline: none;
+}
+
+.input-email {
+@extend .input-template;
+height: 56px;
+line-height: 16px;
+padding: 14px 0px 14px 32px;
+}
+
+.button-template {
+  height: 46px;
+  border-radius: 28px;
+  border: none;
+  font-size: 14px;
+  line-height: 28px;
+  color: $primary-color;
+  font-weight: bold;
+  background-color: $secondary-color;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.email-button {
+  @extend .button-template;
+  width: 162px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  margin-bottom: 64px;
+}
+
+.email-button:hover {
+  background-color: #B3FFE2;
+}
+
+#email-error-message {
+  font-size: 12px;
+  line-height: 14px;
+  color: #FB3E3E;
+  padding-left: 32px;
+  padding-top: 8px;
+  padding-bottom: 42px;
+  font-weight: bold;
+  opacity: 0;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 536px;
+  height: 29px;
+}
+
+.logo-podcast {
+  height: 100%;
+  width: auto;
+}
+.logo-podcast:nth-child(4) {
+  padding-right: 0px;
+}
+
+.logo-spotify {
+  width: 96px;
+  height: 29px;
+  margin-right: 40px;
+}
+
+.logo-apple-podcast {
+  width: 78px;
+  height: 29px; 
+  margin-right: 40px;
+}
+
+.logo-google-podcast {
+  width: 125px;
+  height: 18px; 
+  margin-right: 40px;
+}
+
+.logo-pocket-podcast {
+  width: 129px;
+  height: 26px; 
+}
+
+@media only screen and (min-width: 675px) and (max-width: 1100px){
+  .hero {
+    padding: 0px 0px 0px 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-logo {
+    position: absolute;
+    top: 50px;
+    left: 39px;
+  }
+
+  .hero-container {
+    width: 100%;
+    height: 767px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .image-cover {
+    max-width: 491px;
+    height: 100%;
+    object-fit:cover;
+  }
+  
+  .hero-text-wrapper {
+    width: 635px;
+    height: 509px;
+    top: 261px;
+    left: 39px;
+    padding: 93px 0px 0px 0px;
+  }
+
+  .title {
+    font-size: 48px;
+    line-height: 56px;
+    padding-bottom: 31px;
+    }
+    
+    .hero-bg-pattern {
+      bottom: -257px;
+      left: 39px;
+    }
+}
+
+.hero-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+ background: black;
+}
+
+.hero-mobile:before {
+  content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.15;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+  background-image:  url("../assets/mobile/image-host.jpg");
+  
+}
+
+.hero-logo-mobile {
+  width: 134px;
+  height: auto;
+  padding: 62px 0px 57px 0px; 
+}
+
+.hero-text-wrapper-mobile {
+  text-align: center;
+  margin: 0px 24px;
+  z-index: 2;
+}
+
+.title-mobile {
+  font-size: 26px;
+  line-height: 38px;
+  text-transform: uppercase;
+  color: $white-color;
+  padding-bottom: 16px;
+}
+
+.subheader-mobile {
+  font-size: 15px;
+  line-height: 25px;
+  color: $third-color;
+  padding-bottom: 33px;
+  }
+
+.logo-container-mobile {
+  width: 100%;
+  height: 17px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 48px;
+}
+
+.logo-spotify-mobile {
+  width: 56px;
+  height: 17px;
+  margin-right: 23px;
+}
+
+.logo-apple-podcast-mobile {
+  width: 45px;
+  height: 17px; 
+  margin-right: 25px;
+}
+
+.logo-google-podcast-mobile {
+  width: 73px;
+  height: 11px; 
+  margin-right: 16px;
+}
+
+.logo-pocket-podcast-mobile {
+  width: 77px;
+  height: 15px; 
+}
+
+.input-email-mobile {
+  @extend .input-template;
+    height: 46px;
+    line-height: 28px;
+    padding: 9px 0px 9px 32px;
+}
+
+.button-template {
+  height: 46px;
+  border-radius: 28px;
+  border: none;
+  font-size: 14px;
+  line-height: 28px;
+  color: $primary-color;
+  font-weight: bold;
+  background-color: $secondary-color;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.email-button-mobile {
+  @extend .button-template;
+  width: 100%;
+  margin-top: 25px;
+}
+
+#email-error-message-mobile {
+  font-size: 12px;
+  line-height: 14px;
+  color: #FB3E3E;
+  padding-left: 0px;
+  padding-top: 8px;
+  font-weight: bold;
+  opacity: 0;
+}
+
+
+@media only screen and (min-width: 676px) {
+  .hero-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 675px) {
+  .hero {
+    display: none;
+  }
+
+}
