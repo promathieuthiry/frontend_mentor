@@ -1,8 +1,6 @@
 function ValidateEmail(inputText, mobile) {
-    console.log(inputText)
     var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (inputText.match(mailformat)) {
-        console.log("match")
         return true;
     }
     else {
