@@ -170,3 +170,34 @@ body {
     right: 40px;
     top: 32px;
   }
+
+  @media only screen and (max-width: 950px) {
+    .hero-container {
+        background-image:  url("../images/bg-mobile.png");
+        background-size: cover;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .first-element {
+        width: 100%;
+        max-width: 326px;
+        margin: 0px 25px;
+    }
+
+    .second-element {
+        width: 100%;
+        max-width: 326px;
+        margin: 0px 25px;
+        margin-top: 16px;
+    }
+
+    .storage-left-container {
+        top: 130px;
+        right: 74px;
+    }
+
+    .arrow-down {
+        display: none;
+    }
+
+  }
