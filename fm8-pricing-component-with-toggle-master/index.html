@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/styles.css">
+
+  <title>Frontend Mentor | Pricing component with toggle</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <p class="header-title">Our Pricing</p>
+      <div class="header-subtitle-container">
+        <p>Annually</p>
+        <div class="checkbox">
+          <div class="checkbox-whiteball"></div>
+        </div>
+        <p> Monthly</p>
+      </div>
+    </header>
+
+    <main class="card">
+      <!-- card1 -->
+      <div class="card__wrapper card__wrapper--style1">
+        <p class="card__title">Basic</p>
+        <p class="card__price">
+          <span class="card__price-dollar">&dollar;</span>19.99
+        </p>
+        <p class="card__description ">500 GB Storage</p>
+        <p class="card__description">2 Users Allowed</p>
+        <p class="card__description last-item">Send up to 3 GB</p>
+        <button class="btn">Learn More</button>
+      </div>
+
+      <!-- card2 -->
+      <div class="card__wrapper card__wrapper--style2">
+        <p class="card__title white-text">Professional</p>
+        <p class="card__price white-text">
+          <span class="card__price-dollar">&dollar;</span>24.99
+        </p>
+        <p class="card__description white-text ">1 TB Storage</p>
+        <p class="card__description white-text">5 Users Allowed</p>
+        <p class="card__description last-item white-text">Send up to 10 GB</p>
+        <button class="btn-active">Learn More</button>
+      </div>
+
+      <!-- card3 -->
+      <div class="card__wrapper card__wrapper--style3">
+        <p class="card__title">Master</p>
+        <p class="card__price">
+          <span class="card__price-dollar">&dollar;</span>39.99
+        </p>
+        <p class="card__description ">2 TB Storage</p>
+        <p class="card__description">10 Users Allowed</p>
+        <p class="card__description last-item">Send up to 20 GB</p>
+        <button class="btn">Learn More</button>
+
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

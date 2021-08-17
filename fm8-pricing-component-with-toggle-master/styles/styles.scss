@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+$primary-color: #F2F2F2;
+$secondary-color: #6E728E;
+$third-color: #4A4D60;
+$fourth-color: #6D72DE;
+// $white-color: #FFF;
+
+@mixin gradient{
+   background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+}
+
+
+* { 
+    padding: 0; 
+    margin: 0;     
+    box-sizing: border-box;  
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    background-color: $primary-color;
+    background-image: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
+    background-position: right top, left bottom;
+    background-repeat: no-repeat, no-repeat;
+  
+}
+
+header {
+    width: 239px;
+    text-align: center;
+    margin-top: 71px;
+    margin-bottom: 64px;
+}
+
+.white-text {
+    color: #FFF !important;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    color: $secondary-color;
+    padding-bottom: 40px;
+}
+
+.header-subtitle-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: Montserrat;
+    font-weight: bold;
+    line-height: 28px;
+    color: rgba($secondary-color, .5);
+}
+
+.checkbox {
+    width: 56px;
+    height: 32px;
+    background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+    border-radius: 16px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.checkbox:hover {
+    opacity: .5;
+}
+
+
+.checkbox-whiteball {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.card {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   padding-left: 13.54%;
+   padding-right: 13.54%;
+    width: 100%;
+} 
+
+.card__wrapper {
+    width: 350px;
+    height: 453px;
+    background-color: #FFF;
+    text-align: center;
+    padding: 31px;
+  
+}
+
+.card__wrapper--style1 {
+box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
+border-radius: 10px 0px 0px 10px;
+}
+
+.card__wrapper--style2 {
+@include gradient;
+box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
+border-radius: 10px;
+height: 500px;
+}
+
+.card__wrapper--style3 {
+box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
+border-radius: 0px 10px 10px 0px;
+}
+
+.card__title {
+
+font-size: 18px;
+line-height: 28px;
+color: $secondary-color;
+margin-bottom: 24px;
+}
+
+.card__price {
+font-size: 72px;
+line-height: 71px;
+letter-spacing: -2.16px;
+color: $third-color;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 32px;
+}
+
+.card__price-dollar {
+font-size: 40px;
+line-height: 49px;
+letter-spacing: -1.2px;
+margin-right: 8px;
+}
+
+.card__description {
+    width: 100%;
+    font-size: 15px;
+    line-height: 28px;
+    color: $secondary-color;
+    padding: 12px 0px;
+    border-top: 1px solid rgba($secondary-color, .25);
+}
+
+.last-item {
+    border-bottom: 1px solid rgba($secondary-color, .25);
+}
+
+@mixin btn {
+    margin-top: 32px;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    height: 44px;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 1.39286px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.btn {
+    @include gradient;
+    @include btn;
+    color: #FFFFFF;
+}
+
+.btn:hover {
+    background: #fff;
+    color: $fourth-color;
+    border: 1px solid $fourth-color;
+}
+
+.btn-active {
+    @include btn;
+    color: $fourth-color;
+}
+
+.btn-active:hover {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #FFF;
+}
