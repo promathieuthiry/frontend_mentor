@@ -41,7 +41,6 @@ header {
 }
 
 .container {
-    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -72,16 +71,23 @@ header {
     background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
     border-radius: 16px;
     position: relative;
-    cursor: pointer;
     transition: all 0.5s ease-out;
+}
+
+.checkbox input {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .checkbox:hover {
     opacity: .5;
 }
 
-
-.checkbox-whiteball {
+ .checkbox-whiteball {
     width: 24px;
     height: 24px;
     position: absolute;
@@ -89,6 +95,12 @@ header {
     right: 4px;
     background-color: #fff;
     border-radius: 50%;
+    transition: all 0.5s ease-out;
+}
+
+input:checked .checkbox-whiteball{
+    top: 4px;
+    right: 4px;
 }
 
 .card {
@@ -128,7 +140,6 @@ border-radius: 0px 10px 10px 0px;
 }
 
 .card__title {
-
 font-size: 18px;
 line-height: 28px;
 color: $secondary-color;
@@ -205,3 +216,38 @@ margin-right: 8px;
     border: 1px solid #fff;
     color: #FFF;
 }
+
+ .show-annually {
+    display: none
+}
+
+// .show-montly {
+//     // display: none;
+// }
+// .show-annually {
+//     display: none;
+// }
+
+@media only screen and (max-width: 850px) {
+    body {
+        background-image: url(../images/bg-top.svg);
+        background-position: 100% 0%;
+    }
+    .card {
+        flex-direction: column;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-bottom: 71px;
+        padding-top: 14px;
+    }
+
+    .card__wrapper--style1 {
+        border-radius: 10px;
+        margin-bottom: 32px;
+    }
+
+    .card__wrapper--style2 {
+        height: 453px;
+        margin-bottom: 32px;
+    }
+  }
