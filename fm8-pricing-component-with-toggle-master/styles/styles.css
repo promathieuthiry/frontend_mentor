@@ -17,7 +17,7 @@ body {
   background-repeat: no-repeat, no-repeat;
 }
 
-header {
+section {
   width: 239px;
   text-align: center;
   margin-top: 71px;
@@ -250,10 +250,10 @@ input:checked .checkbox-whiteball {
   display: none;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 880px) {
   body {
     background-image: url(../images/bg-top.svg);
-    background-position: 100% 0%;
+    background-position: right 0%;
   }
   .card {
     -webkit-box-orient: vertical;

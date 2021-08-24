@@ -1,0 +1,168 @@
+@import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Red Hat Text', sans-serif;
+    font-size: 1.4rem;
+    background-color: $secondary-color;
+    box-sizing: border-box;
+    background-image: url(../images/bg-stars.svg), url(../images/pattern-hills.svg);
+    background-position: top, bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto 75vh, 100vw 25vh;
+    position: relative;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    margin: 13.2rem 0rem 10.4rem 0rem;
+    color: $white-color;
+    font-size: 2.2rem;
+    line-height: 2.9rem;
+    text-align: center;
+    letter-spacing: .75rem;
+    text-transform: uppercase;
+}
+
+.counter {
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 70rem;
+    max-height: 18.4rem;
+    
+
+    &__card-wrapper {
+        width: 14.8rem;
+        height: 18.4rem;
+        font-size: 8rem;
+    }
+    &__card {
+        background-color: #343650;
+        border-radius: .8rem;
+        margin-right: 3.2rem;
+        width: 100%;
+        height: 81.5%;
+        position: relative;
+        p {
+            // font-size: 8rem;
+            line-height: 7.1rem;
+            text-align: center;
+            letter-spacing: -.24rem;
+            color: $third-color;
+    }
+  
+   
+    &--top,
+    &--bottom {
+      position: absolute;
+      height: 49.5%;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    &--top {
+      border-radius: 8px 8px 0px 0px;
+      background: $fourth-color;
+      top: 0%;
+      p {
+        margin-top: 37px;
+      }
+    }
+    &--bottom {
+      top: 51%;
+      border-radius: 0 0 4px 4px;
+      p {
+        margin-top: -37px;
+      }
+    }
+}
+    &__card:last-child {
+        margin-right: 0rem;
+    }
+    &__card-label {
+        margin-top: 1.4rem;
+        line-height: 1.9rem;
+        text-align: center;
+        letter-spacing: .591875rem;
+        color: $primary-color;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+}   
+}
+
+footer {
+   
+    position: absolute;
+    bottom: 9.8%;
+    width: 13.6rem;
+    height: 2.4rem;
+    color: $third-color;
+    
+    ul {
+        display: flex;
+        justify-content: space-between;
+        text-decoration: none;
+        list-style: none;
+    }
+
+    
+    svg path{
+        transition: fill .5s ease;
+    }
+
+    li:hover path {
+        fill: $third-color;
+    }
+   
+}
+
+@media only screen and (max-width: 750px) {
+  .counter {
+    width: 100%;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  &__card-wrapper {
+    width: 7rem;
+    height: 9.2rem;
+    font-size: 3.6rem;
+  }
+
+  .counter__card-label {
+    font-size: 7px;
+    line-height: 9px;
+    letter-spacing: 2.95937px;
+  }
+  .counter__card--top p{
+    margin-top: 0px;
+  }
+
+}
+ul {
+  justify-content: space-evenly;
+}
+}

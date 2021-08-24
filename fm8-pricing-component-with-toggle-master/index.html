@@ -15,25 +15,24 @@
 
 <body>
   <div class="container">
-    <header>
-      <p class="header-title">Our Pricing</p>
+    <section>
+      <h1 class="header-title">Our Pricing</h1>
       <div class="header-subtitle-container">
-        <p>Annually</p>
-
+        <p onclick="showAnnually()" style="cursor: pointer">Annually</p>
         <div class="checkbox">
           <label for="toggle"></label>
           <input type="checkbox" name="toggle" id="toggle" onchange="showHide()" />
           <div class="checkbox-whiteball"></div>
         </div>
-        <p> Monthly</p>
+        <p onclick="showMonthly()" style="cursor: pointer"> Monthly</p>
       </div>
   </div>
-  </header>
+  </section>
 
   <main class="card">
     <!-- card1 -->
     <div class="card__wrapper card__wrapper--style1">
-      <p class="card__title">Basic</p>
+      <h2 class="card__title">Basic</h2>
       <p class="card__price show-montly">
         <span class="card__price-dollar">&dollar;</span>19.99
       </p>
@@ -48,7 +47,7 @@
 
     <!-- card2 -->
     <div class="card__wrapper card__wrapper--style2">
-      <p class="card__title white-text">Professional</p>
+      <h2 class="card__title white-text">Professional</h2>
       <p class="card__price show-montly white-text">
         <span class="card__price-dollar ">&dollar;</span>24.99
       </p>
@@ -63,7 +62,7 @@
 
     <!-- card3 -->
     <div class="card__wrapper card__wrapper--style3">
-      <p class="card__title">Master</p>
+      <h2 class="card__title">Master</h2>
       <p class="card__price show-montly">
         <span class="card__price-dollar ">&dollar;</span>39.99
       </p>
