@@ -43,7 +43,6 @@ body {
   background-position: top left;
   background-repeat: no-repeat;
   background-size: auto 50vh;
-  gap: 5.4rem;
 }
 
 main {
@@ -71,9 +70,6 @@ main {
   grid-area: 1 / 1 / 2 / 2;
   text-align: center;
   position: relative;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
 }
 
 .title h1 {
@@ -391,15 +387,20 @@ main {
   .toggle__price-discount-mobile {
     display: none;
   }
+  .bottom {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 450px) {
   main {
-    -ms-grid-rows: 8.1rem 47.8rem;
-        grid-template-rows: 8.1rem 47.8rem;
-    -ms-grid-columns: 32.8rem;
-        grid-template-columns: 32.8rem;
-    gap: 6.4rem;
+    -ms-flex-line-pack: start;
+        align-content: start;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+    -ms-grid-columns: minmax(25rem, 32.8rem);
+        grid-template-columns: minmax(25rem, 32.8rem);
+    padding: 8.9rem 2.4rem;
   }
   .title h1 {
     font-size: 20px;
@@ -420,12 +421,13 @@ main {
             justify-content: center;
     width: 100%;
     padding: 3.4rem 0rem 2.5rem 0rem;
+    margin-bottom: 8.9rem;
   }
   .toggle__per-month {
     display: none;
   }
   .toggle__price-information {
-    padding: 3.4rem 1.1rem 3.8rem 0rem;
+    padding: 3.4rem 1.1rem 3.8rem 1.1rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -450,9 +452,14 @@ main {
         -ms-flex-direction: column;
             flex-direction: column;
     padding: 2.4rem 0rem 3.2rem 0rem;
+    height: auto;
   }
   .toggle__footer ul {
     margin-bottom: 2.2rem;
+  }
+  .bottom {
+    height: 9rem;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */
