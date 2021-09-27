@@ -1,0 +1,4 @@
+@function fluid($min, $pref, $max) {
+    $size: clamp(#{rem($min)}, #{$pref}, #{rem($max)});
+    @return $size;
+  }

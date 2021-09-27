@@ -1,0 +1,558 @@
+body {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(7, min-content);
+  grid-template-columns: [full-start] repeat(2, 1fr) [full-end];
+}
+
+.nav {
+  grid-column: full-start / full-end;
+  padding: 7.5rem 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $Dark-Blue-1;
+  width: 100%;
+
+  @media only screen and (max-width: 800px) {
+    padding: 4.2rem 4.4rem;
+  }
+
+  @media only screen and (max-width: 400px) {
+    padding: 2.4rem 2rem;
+  }
+  &__logo {
+    max-width: 17.6rem;
+    @media only screen and (max-width: 800px) {
+      max-width: 9.7rem;
+    }
+
+    @media only screen and (max-width: 400px) {
+      max-width: 8rem;
+    }
+  }
+  ul {
+    display: flex;
+    gap: clamp(2.4rem, 4vw, 5.7rem);
+    list-style-type: none;
+    li {
+      font-size: clamp(1.2rem, 1.5vw, 1.6rem);
+      line-height: clamp(1.4rem, 1.5vw, 1.9rem);
+      font-family: $font-display;
+      transition: all 0.5s ease;
+
+      @include link;
+    }
+  }
+}
+
+.hero {
+  background-color: $Dark-Blue-1;
+  grid-column: full-start / full-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-bottom: 16rem;
+
+  @media only screen and (max-width: 800px) {
+    padding-bottom: 12rem;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 72.4rem;
+    padding: 0rem 3.6rem;
+    z-index: 10;
+  }
+
+  h1 {
+    font-family: $font-display;
+    font-size: 4rem;
+    line-height: 6rem;
+    padding: 3.6rem 24.5% 3.2rem 24.5%;
+    text-align: center;
+    z-index: 10;
+
+    @media only screen and (max-width: 800px) {
+      font-size: 2.4rem;
+      line-height: 3.6rem;
+      padding: 3.3rem 2.8rem 1.5rem 2.8rem;
+    }
+  }
+
+  h3 {
+    padding: 0rem 29.5% 3.2rem 29.5%;
+    font-weight: 400 !important;
+    font-style: normal;
+    font-weight: normal;
+    font-family: $font-primary;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    z-index: 10;
+
+    @media only screen and (max-width: 800px) {
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+      padding: 1.5rem 4rem 3.2rem 4rem;
+    }
+  }
+  &__bg {
+    position: absolute;
+    bottom: 0rem;
+    left: 0rem;
+    z-index: 5;
+    width: 100vw;
+    height: auto;
+  }
+}
+
+.features {
+  background-color: $Dark-Blue-2;
+  grid-column: full-start / full-end;
+  width: 100%;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    row-gap: 7.9rem;
+    column-gap: 14.7rem;
+    padding: 0rem 19.4% 13.7rem 19.4%;
+    width: 100%;
+    justify-items: center;
+
+    @media only screen and (max-width: 500px) {
+      padding: 0rem 2.7rem 16rem 2.7rem;
+    }
+
+    @media only screen and (max-width: 350px) {
+      grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1.6rem;
+    width: auto;
+    height: 10.4rem;
+
+    @media only screen and (max-width: 800px) {
+      width: auto;
+      height: 8rem;
+    }
+  }
+  &__item {
+    h2 {
+      font-family: $font-display;
+      font-weight: bold;
+      font-size: 2rem;
+      line-height: 2.3rem;
+      text-align: center;
+      margin-bottom: 0.8rem;
+    }
+    h5 {
+      font-family: $font-primary;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+      text-align: center;
+      color: $white-color;
+    }
+  }
+}
+
+.informations {
+  &__img {
+    padding-left: 10.5rem;
+    grid-column: 1 / 2;
+    background-color: $Dark-Blue-2;
+    @media only screen and (max-width: $bp-large) {
+      grid-column: 1 / -1;
+      padding: 0rem 2.8rem;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 61.5rem;
+      width: 100%;
+      padding: 0rem 3.6rem;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    background-color: $Dark-Blue-2;
+    grid-column: 2 / 3;
+    padding-right: 10.1rem;
+
+    @media only screen and (max-width: $bp-large) {
+      grid-column: 1 / -1;
+      padding: 4.8rem 2.8rem 0rem 2.8rem;
+    }
+
+    > * {
+      padding-bottom: 1.9rem;
+    }
+    h1 {
+      font-family: $font-display;
+      font-size: 4rem;
+      line-height: 5rem;
+      width: 80%;
+
+      @media only screen and (max-width: $bp-large) {
+        width: 100%;
+      }
+    }
+
+    h3 {
+      font-family: $font-primary;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      font-style: normal;
+      font-weight: normal;
+      transition: all 0.5s ease;
+    }
+
+    &--underline {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      a {
+        font-family: $font-primary;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        font-style: normal;
+        font-weight: normal;
+        transition: all 0.5s ease;
+        color: $Cyan-Text !important;
+        padding-bottom: 0.4rem;
+        border-bottom: 0.1rem solid $Cyan-Text;
+        text-decoration: none;
+        &:hover {
+          color: $white-color !important;
+          border-bottom: 0.1rem solid $white-color;
+          img {
+            filter: brightness(0) invert(1);
+          }
+        }
+      }
+      img {
+        transform: translateY(0.4rem);
+        padding-left: 0.7rem;
+      }
+      // svg {
+      //   z-index: 5;
+      //   padding-left: 0.7rem;
+      //   transform: translateY(0.4rem);
+      //   fill: red !important;
+      // }
+    }
+  }
+}
+
+.testimonials {
+  background-color: $Dark-Blue-2;
+  grid-column: full-start / full-end;
+  padding: 12rem 12rem 9rem 12rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  row-gap: 2.4rem;
+  column-gap: 4rem;
+
+  @media only screen and (max-width: $bp-large) {
+    grid-column: 1 / -1;
+    padding: 0rem 4.8rem 5rem 4.8rem;
+  }
+
+  @media only screen and (max-width: 350px) {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+
+  &__cards {
+    background: #202a3c;
+    box-shadow: 0.5rem 0.5rem 0.8rem 0.4rem rgba(56, 56, 56, 0.0991282);
+    border-radius: 0.34rem;
+    padding: 4rem 2.6rem 2.6rem 2.6rem;
+    z-index: 5;
+    p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+      letter-spacing: 0.05rem;
+    }
+  }
+
+  &__cards:nth-child(1) {
+    position: relative;
+    z-index: 500;
+  }
+
+  &__footer {
+    padding-top: 2.4rem;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: 50%;
+    }
+    &-name {
+      display: flex;
+      flex-direction: column;
+      padding-left: 0.8rem;
+      h6 {
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 1.2rem;
+      }
+      p {
+        font-size: 0.7rem;
+        line-height: 1rem;
+      }
+    }
+  }
+
+  &__quote {
+    position: absolute;
+    top: -3rem;
+    left: 0rem;
+    z-index: 3;
+  }
+}
+
+.mail {
+  background-color: $Dark-Blue-2;
+  padding: 0rem 20%;
+  grid-column: full-start / full-end;
+  text-align: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 0rem 2rem;
+  }
+
+  &__container {
+    background-color: $Dark-Blue-1;
+    padding: 4.2rem 7.7rem 2.2rem 7.7rem;
+    box-shadow: 0.5rem 0.5rem 0.8rem rgba(0, 0, 0, 0.254274);
+    border-radius: 0.9rem;
+    transform: translateY(110px);
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 4rem 2.8rem 3.7rem 2.8rem;
+    }
+
+    h1 {
+      font-family: $font-display;
+      font-size: 3.2rem;
+      line-height: 4.8rem;
+      font-weight: bold;
+
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+      }
+    }
+
+    h3 {
+      font-family: $font-primary;
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+      font-style: normal;
+      font-weight: 400;
+      padding: 1.6rem 1.8rem 3.8rem 1.8rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        padding: 1.6rem 2.8rem 3.2rem 2.8rem;
+      }
+    }
+  }
+
+  &__buttons-input-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    width: 100%;
+
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column;
+      gap: 0rem;
+    }
+
+    .input-email {
+      border: none;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      background-color: $white-color;
+      border-radius: 2.4rem;
+      width: 100%;
+      color: $input-text;
+      outline: none;
+      max-width: 48rem;
+      height: 4.8rem;
+      padding: 1.8rem 20rem 1.8rem 3.8rem;
+    }
+
+    button {
+      padding: 1.5rem 2.6rem;
+      height: 4.8rem;
+      max-width: 20rem;
+      font-family: $font-display;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+      width: 100%;
+
+      @media only screen and (max-width: $bp-medium) {
+        max-width: 100%;
+        width: 48rem;
+      }
+    }
+  }
+
+  #email-error-message {
+    height: 2.4rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    color: #fb3e3e;
+    padding-left: 3.2rem;
+    padding-top: 0.8rem;
+    font-weight: bold;
+    opacity: 0;
+    text-align: left;
+  }
+}
+
+.footer {
+  background-color: $Dark-Blue-3;
+  padding: 17rem 8.1rem 5.3rem 12rem;
+  grid-column: full-start / full-end;
+
+  //   display: grid;
+  //   grid-template-rows: repeat(2, min-content);
+  //   grid-template-columns: 38rem repeat(auto-fit, minmax(17rem, 1fr));
+
+  //   grid-template-columns:
+  //     minmax(auto-fit, 38rem) minmax(auto-fit, 17rem) minmax(auto-fit, 7rem)
+  //     minmax(auto-fit, 9rem) minmax(auto-fit, 12rem, auto);
+  font-family: $font-primary;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  text-align: left;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 17rem 2.8rem 5.3rem 2.8rem;
+  }
+
+  &__logo {
+    margin-bottom: 5.2rem;
+    width: auto;
+    height: 3.1rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__col {
+    display: flex;
+  }
+
+  &__col-1 {
+    display: flex;
+    max-width: 38rem;
+    margin-right: 8rem;
+    margin-bottom: 1.6rem;
+    p {
+      padding-left: 1.6rem;
+    }
+  }
+
+  &__col-icon-logo {
+    transform: translateY(5px);
+  }
+
+  &__col-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  &__col-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-right: 14.6rem;
+    margin-bottom: 5.6rem;
+    p {
+      padding-left: 1.6rem;
+    }
+    img {
+      transform: translateY(5px);
+    }
+  }
+
+  &__col-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-right: 8rem;
+    margin-bottom: 4.8rem;
+
+    @include link-footer;
+  }
+
+  &__col-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-right: 10.8rem;
+    margin-bottom: 5.6rem;
+
+    @include link-footer;
+  }
+
+  &__col-5 {
+    display: flex;
+    gap: 1.1rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__icon {
+    width: 3.2rem;
+    height: 3.2rem;
+    border: 0.05rem solid $white-color;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    &:hover {
+      border: 0.05rem solid $Cyan-Text;
+      color: $Cyan-Text;
+    }
+  }
+}
