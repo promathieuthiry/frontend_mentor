@@ -23,21 +23,6 @@ function List({
   clear,
 }) {
   function dragEnd(param) {
-    // if (destination !== "undefined") {
-    //   if (caseFilter === 0) {
-    //     const rawData = spliceArray(newData, source, destination, element);
-    //     return setData(rawData);
-    //   }
-    //   if (caseFilter === 1) {
-    //     const arr = newData.filter((el) => !el.isDone);
-    //     const det = arr[destination];
-    //     const el = arr[source];
-    //     const s = id.indexOf(param.draggableId);
-    //     const d = id.indexOf(det.key);
-    //     const rawData = spliceArray(newData, s, d, el);
-    //     return setData(rawData);
-    //   }
-    // }
     const destination = param.destination?.index;
     if (destination !== undefined) {
       reorder(param, data, setData, caseFilter);
@@ -48,12 +33,7 @@ function List({
       <DragDropContext onDragEnd={dragEnd}>
         <Droppable droppableId="droppable-1">
           {(provided, snapshot) => (
-            <Wrapper
-              provided={provided}
-              // style={{
-              //   backgroundColor: snapshot.isDraggingOver ? "blue" : "grey",
-              // }}
-            >
+            <Wrapper provided={provided}>
               {filterArr(data).map((task, index) => {
                 const { title, isDone, key } = task;
                 return (
@@ -98,7 +78,3 @@ function List({
 }
 
 export default List;
-
-// LovePikachu!2016
-
-// LovePikachu!2016

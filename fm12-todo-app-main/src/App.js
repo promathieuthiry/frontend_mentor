@@ -18,7 +18,6 @@ function App() {
   const [input, setInput] = useState("");
   const [data, setData] = useState(initialValue);
   const [caseFilter, setCaseFilter] = useState(0);
-  // const [theme, setTheme] = useState("light");
   const [theme, themeToggler] = useDarkMode();
   const themeMode = theme === "light" ? lightTheme : darkTheme;
 
