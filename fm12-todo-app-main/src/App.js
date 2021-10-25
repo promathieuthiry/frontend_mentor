@@ -101,6 +101,7 @@ function App() {
             <List
               filterArr={filterArr}
               data={data}
+              setData={setData}
               onSelect={onSelect}
               onDelete={onDelete}
               caseFilter={caseFilter}

@@ -13,14 +13,12 @@ export const Cross = styled.img`
 
 export const Container = styled.div`
   width: 100%;
-  max-height: 80%;
   background-color: ${({ theme }) => theme.backgroundList};
   box-shadow: ${({ theme }) => theme.boxShadow};
   border-radius: 0.5rem;
-  overflow-y: auto;
 `;
 
-export const Wrapper = styled.ul`
+export const Lu = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -37,14 +35,22 @@ export const Wrapper = styled.ul`
   }
 `;
 
-export const ListItem = styled.li`
+export const Wrapper = ({ provided, children }) => {
+  return (
+    <Lu ref={provided.innerRef} {...provided.droppableProps}>
+      {children}
+    </Lu>
+  );
+};
+
+export const Li = styled.li`
   height: 6.4rem;
   border-bottom: ${({ theme }) => theme.border};
   display: flex;
   flex-direction: row;
   align-items: center;
   padding-right: 2.4rem;
-  transition: all 0.5s ease-out;
+  /* transition: all 0.5s ease-out; */
   font-size: 1.8rem;
 
   &:hover ${Cross} {
@@ -59,6 +65,18 @@ export const ListItem = styled.li`
     max-height: 25rem;
   }
 `;
+
+export const ListItem = ({ provided, children }) => {
+  return (
+    <Li
+      ref={provided.innerRef}
+      {...provided.draggableProps}
+      {...provided.dragHandleProps}
+    >
+      {children}
+    </Li>
+  );
+};
 
 export const CrossIcon = ({ src, onDelete, task }) => {
   return <Cross src={src} onClick={(event) => onDelete(event, task)} />;
