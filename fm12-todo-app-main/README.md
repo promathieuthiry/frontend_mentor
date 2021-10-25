@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [FrontEnd-Mentor](https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd/hub/fylodarktheme-using-css-grid-txLFwS4RM)
-- Live Site URL: [netlify](https://frontend-mentor-promathieuthiry.netlify.app/fm12-todo-app-main)
+- Solution URL: [FrontEnd-Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW/hub/todo-app-using-react-styled-component-and-reactbeautifuldnd-PRYqOE86f)
+- Live Site URL: [netlify](https://mathieu-thiry-todo-app.netlify.app/)
 
 ## My process
 
