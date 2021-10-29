@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Source from './data/data.json';
 import GlobalStyle from './styles/globalStyles';
 import { ThemeProvider } from 'styled-components';
@@ -27,7 +27,7 @@ export function App() {
     if (filterQuery.length > 0) {
       let res = [];
       for (let job of arr) {
-        let jobTags = [job.role, job.level, ...job.languages];
+        let jobTags = [job.role, job.level, ...job.languages, ...job.tools];
         if (filterQuery.every((value) => jobTags.includes(value))) {
           res.push(job);
         }
@@ -38,7 +38,6 @@ export function App() {
     }
   };
 
-  console.log(jobs, 'jobs');
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyle />
@@ -49,7 +48,7 @@ export function App() {
           filterQuery={filterQuery}
           setFilterQuery={setFilterQuery}
         />
-        {filterEl(jobs).map((job, index) => (
+        {filterEl(jobs).map((job) => (
           <Cards key={job.id} job={job} addElement={addElement} />
         ))}
       </Wrapper>

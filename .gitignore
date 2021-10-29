@@ -123,3 +123,5 @@ dist
 
 # babel
 .babelrc.json
+
+.DS_Store

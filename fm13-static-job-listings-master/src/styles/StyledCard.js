@@ -151,8 +151,8 @@ export const Categories = ({ job }) => {
 };
 
 export const ButtonType = ({ job, addElement }) => {
-  const { role, level, languages } = job;
-  const data = [role, level, ...languages];
+  const { role, level, languages, tools } = job;
+  const data = [role, level, ...languages, ...tools];
   return (
     <ButtonContainer>
       {data &&
