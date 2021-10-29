@@ -55,6 +55,8 @@ typings/
 
 # Optional eslint cache
 .eslintcache
+.eslintignore
+.eslintrc.js
 
 # Microbundle cache
 .rpt2_cache/
@@ -91,6 +93,9 @@ dist
 # https://nextjs.org/blog/next-9-1#public-directory-support
 # public
 
+# parcel
+.parcel-cache
+.parcelrc
 # vuepress build output
 .vuepress/dist
 
@@ -112,3 +117,9 @@ dist
 
 # vscode
 .vscode
+
+# prettier file
+.prettierrc
+
+# babel
+.babelrc.json
